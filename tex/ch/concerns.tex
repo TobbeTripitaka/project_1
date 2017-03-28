@@ -1,0 +1,30 @@
+
+Knowing that radiometric data are not available for Antarctica, I should rather rely on magnetic, gravity and possibly seismic derived data, e.g. Moho and/or LAB depth or shallow elastic properties. Subglacial topography could also be a relevant dataset, at least as a reference, maybe corrected for ice thickness. To really compare Australian with Antarctic data, I will use global datasets to mitigate the effects of different resolution. However, at this point I still find it useful to refer to the high resolution Australian data. 
+
+Change point detection is by it's nature a 1D method, traditionally used for time series. I, so far, use extracted time series from 2D datasets. However, I'm worried that artefacts form acquisition and processing have a large impact. E.g. missing data will directly be interpreted as a change-point in most cases and changes in acquisition methods, e.g. between high resolution airborne magnetic data vs. low resolution satellite data in the ADMAP dataset. In the case of Antarctica, this can be improved by use of new high resolution datasets for gravity and magnetism. 
+
+Finally, smoothing and other filtering of the original 2D datasets are common, but can also affect the detected change-points. Only necessary processing should be applied to the datasets used. Some noise depends on geological factors.
+
+The processed data is (from Reading and Gallagher (2013) \cite{Reading2013}): 
+
+\begin{equation}
+\sigma^2_{T} =\sigma^2_{GP} + \sigma^2_{GN}  + \sigma^2_{AN}
+\end{equation}
+
+$\sigma^2_{GP} $ and $\sigma^2_{GN} $ represent the actual earth, but the analytical and technical noise, $\sigma^2_{AN}$, would be a more important factor in the spatial application. 
+
+In this unscaled application. $GP$ could be imagined representing geological terrain boundaries and $GN$ the local geology, sedimentary cover and anomalies. 
+
+$\sigma^2_{AN}$  \textit{contains}:
+\begin{enumerate}
+	
+	\item Geometric limitation in datasets, spatial frequency distribution.
+	\item Information derived from instrumentation. 
+	\item Data gaps. Could be solved by implementing Xie's (2013) \cite{Xie2013}
+	\item Information derived from interpolation, when 1D datasets were compiled to 2D.
+	\item Information derived from corrections, eg. Bouguer correction. 
+
+\end{enumerate}
+
+Weighting and normalisation of datasets is also an issue that should ve discussed and tested. I'm using a basic peak-to-peak algorithm, (\texttt{(x - x.min()) / (x.max() - x.min())}) but I guess that an actual scaling parameter based on the content of the data would be better. 
+

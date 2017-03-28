@@ -1,0 +1,471 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Adams2007}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ARP}{%
+         family={Adams},
+         familyi={A\bibinitperiod},
+         given={Ryan\bibnamedelima Prescott},
+         giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=MDJ}{%
+         family={MacKay},
+         familyi={M\bibinitperiod},
+         given={David\bibnamedelima JC},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ARPMDJ1}
+    \strng{fullhash}{ARPMDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Bayesian online changepoint detection}
+    \verb{file}
+    \verb :Adams2007.pdf:PDF
+    \endverb
+    \field{journaltitle}{arXiv preprint arXiv:0710.3742}
+    \field{year}{2007}
+  \endentry
+
+  \entry{Cracknell2015}{report}{}
+    \name{author}{1}{}{%
+      {{hash=CM}{%
+         family={Cracknell},
+         familyi={C\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CM1}
+    \strng{fullhash}{CM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Multiscale bidirectional geophysical change point analysis
+  across the Australian and Antarctic continents}
+    \list{institution}{1}{%
+      {University of Tasmania}%
+    }
+    \verb{file}
+    \verb :Cracknell2015.pdf:PDF
+    \endverb
+    \field{type}{techreport}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Australia2013}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=DFPM}{%
+         family={Des\bibnamedelima FitzGerald},
+         familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Peter\bibnamedelima Milligan},
+         giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Society of Exploration Geophysicists}%
+    }
+    \strng{namehash}{DFPM1}
+    \strng{fullhash}{DFPM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{booktitle}{Accepted: SEG Annual Meeting, Houston 2013}
+    \verb{doi}
+    \verb 10.1190/segam2013-0482.1
+    \endverb
+    \field{title}{Defining a deep fault network for Australia, using 3D
+  “worming”}
+    \field{month}{08}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Harle2014}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=FHCGPSAFC}{%
+         family={F.\bibnamedelima Harlé},
+         familyi={F\bibinitperiod\bibinitdelim H\bibinitperiod},
+         suffix={F.\bibnamedelima Chatelain},
+         suffixi={F\bibinitperiod\bibinitdelim C\bibinitperiod},
+         given={C.\bibnamedelima Gouy-Pailler S.\bibnamedelima Achard},
+         giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod-P\bibinitperiod
+  S\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Institute of Electrical}%
+      {Electronics Engineers ({IEEE})}%
+    }
+    \strng{namehash}{FHFCCGPSA1}
+    \strng{fullhash}{FHFCCGPSA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{abstract}{%
+    This paper addresses the issue of detecting change-points in multivariate%
+    }
+    \verb{doi}
+    \verb 10.1109/tsp.2016.2566609
+    \endverb
+    \field{number}{16}
+    \field{pages}{4351\bibrangedash 4362}
+    \field{title}{Bayesian model for multiple change-points detection in
+  multivariate time series}
+    \field{volume}{64}
+    \verb{file}
+    \verb :Harle2014.pdf:PDF
+    \endverb
+    \field{journaltitle}{{IEEE} Transactions on Signal Processing}
+    \field{month}{08}
+    \field{year}{2014}
+    \warn{\item Can't use 'date' + 'year'}
+  \endentry
+
+  \entry{Fearnhead2006}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FP}{%
+         family={Fearnhead},
+         familyi={F\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{FP1}
+    \strng{fullhash}{FP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.1007/s11222-006-8450-8
+    \endverb
+    \field{number}{2}
+    \field{pages}{203\bibrangedash 213}
+    \field{title}{Exact and efficient Bayesian inference for multiple
+  changepoint problems}
+    \field{volume}{16}
+    \verb{file}
+    \verb :Fearnhead2006.pdf:PDF
+    \endverb
+    \field{journaltitle}{Statistics and computing}
+    \field{year}{2006}
+  \endentry
+
+  \entry{fitzgerald2006innovative}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FDJ}{%
+         family={FitzGerald},
+         familyi={F\bibinitperiod},
+         given={Desmond\bibnamedelima J},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HH}{%
+         family={Holstein},
+         familyi={H\bibinitperiod},
+         given={Horst},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Society of Exploration Geophysicists}%
+    }
+    \strng{namehash}{FDJHH1}
+    \strng{fullhash}{FDJHH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.1190/1.2164762
+    \endverb
+    \field{number}{1}
+    \field{pages}{87\bibrangedash 94}
+    \field{title}{Innovative data processing methods for gradient airborne
+  geophysical data sets}
+    \field{volume}{25}
+    \verb{file}
+    \verb :fitzgerald2006innovative.pdf:PDF
+    \endverb
+    \field{journaltitle}{The Leading Edge}
+    \field{month}{01}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Gallagher2011a}{article}{}
+    \name{author}{6}{}{%
+      {{hash=GK}{%
+         family={Gallagher},
+         familyi={G\bibinitperiod},
+         given={Kerry},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Bodin},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sambridge},
+         familyi={S\bibinitperiod},
+         given={Malcolm},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={Dominik},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kylander},
+         familyi={K\bibinitperiod},
+         given={Malin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Large},
+         familyi={L\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier {BV}}%
+    }
+    \strng{namehash}{GK+1}
+    \strng{fullhash}{GKBTSMWDKMLD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1016/j.epsl.2011.09.015
+    \endverb
+    \field{number}{1-2}
+    \field{pages}{182\bibrangedash 194}
+    \field{title}{Inference of abrupt changes in noisy geochemical records
+  using transdimensional changepoint models}
+    \field{volume}{311}
+    \verb{file}
+    \verb :Gallagher2011a.pdf:PDF
+    \endverb
+    \field{journaltitle}{Earth and Planetary Science Letters}
+    \field{month}{11}
+    \field{year}{2011}
+  \endentry
+
+  \entry{Matteson1306}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=MDS}{%
+         family={Matteson},
+         familyi={M\bibinitperiod},
+         given={David\bibnamedelima S.},
+         giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=JNA}{%
+         family={James},
+         familyi={J\bibinitperiod},
+         given={Nicholas\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=UC}{%
+         family={University},
+         familyi={U\bibinitperiod},
+         given={Cornell},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MDSJNAUC1}
+    \strng{fullhash}{MDSJNAUC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1080/01621459.2013.849605
+    \endverb
+    \field{title}{A Nonparametric Approach for Multiple Change Point Analysis
+  of Multivariate Data}
+    \verb{file}
+    \verb :Matteson1306.pdf:PDF
+    \endverb
+    \field{year}{2013}
+  \endentry
+
+  \entry{Reading2013}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RAM}{%
+         family={Reading},
+         familyi={R\bibinitperiod},
+         given={Anya\bibnamedelima M},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GK}{%
+         family={Gallagher},
+         familyi={G\bibinitperiod},
+         given={Kerry},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Society of Exploration Geophysicists}%
+    }
+    \strng{namehash}{RAMGK1}
+    \strng{fullhash}{RAMGK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1190/geo2012-0384.1
+    \endverb
+    \field{number}{3}
+    \field{pages}{WB89\bibrangedash WB99}
+    \field{title}{Transdimensional change-point modeling as a tool to
+  investigate uncertainty in applied geophysical inference: An example using
+  borehole geophysical logs}
+    \field{volume}{78}
+    \verb{file}
+    \verb :Reading2013.pdf:PDF
+    \endverb
+    \field{journaltitle}{Geophysics}
+    \field{month}{05}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Xie2013}{article}{}
+    \name{author}{3}{}{%
+      {{hash=XY}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Yao},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Jiaji},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WR}{%
+         family={Willett},
+         familyi={W\bibinitperiod},
+         given={Rebecca},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{XYHJWR1}
+    \strng{fullhash}{XYHJWR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{number}{1}
+    \field{pages}{12\bibrangedash 27}
+    \field{title}{Change-point detection for high-dimensional time series with
+  missing data}
+    \field{volume}{7}
+    \verb{file}
+    \verb :Xie2013.pdf:PDF
+    \endverb
+    \field{journaltitle}{IEEE Journal of Selected Topics in Signal Processing}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Xuan2011}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=XX}{%
+         family={Xuan},
+         familyi={X\bibinitperiod},
+         given={Xiang},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XX1}
+    \strng{fullhash}{XX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{title}{Bayesian inference on change point problems}
+    \list{institution}{1}{%
+      {University of British Columbia}%
+    }
+    \verb{file}
+    \verb :Xuan2011.pdf:PDF
+    \endverb
+    \field{type}{phdthesis}
+    \field{year}{2011}
+  \endentry
+
+  \entry{Xuan2007}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=XX}{%
+         family={Xuan},
+         familyi={X\bibinitperiod},
+         given={Xiang},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Murphy},
+         familyi={M\bibinitperiod},
+         given={Kevin},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {ACM}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery ({ACM})}%
+    }
+    \strng{namehash}{XXMK1}
+    \strng{fullhash}{XXMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{booktitle}{Proceedings of the 24\textsuperscript{th} international
+  conference on Machine learning}
+    \verb{doi}
+    \verb 10.1145/1273496.1273629
+    \endverb
+    \field{pages}{1055\bibrangedash 1062}
+    \field{title}{Modeling changing dependency structure in multivariate time
+  series}
+    \verb{file}
+    \verb :Xuan2007.pdf:PDF
+    \endverb
+    \field{year}{2007}
+  \endentry
+\endsortlist
+\endinput

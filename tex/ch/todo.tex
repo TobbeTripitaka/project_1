@@ -1,0 +1,19 @@
+
+The todo list
+
+\begin{enumerate}
+	\item Apply methods on consistent, global, datasets over Antarctica and Australia. At the moment accept the lower resolution, but as next step try to apply the developed methods on high resolution data (e.g. ICECAP and ADMAP2)
+	
+	\item Look at methods to weight the datasets. E.g. use different conditional priors for different data. 
+	
+	\item Compare 1D changepoint detection with 2D methods, e.g. worming (e.g. \cite{Australia2013, fitzgerald2006innovative}). Basic slope maps and second order slope maps, change of change rate. By higher derivation of data, it could be possible to map the changes in the 2D plane. 
+	
+	\item Improve prior function. Instead of the constant prior, used in this report, a geometric prior based on geological expectation should be tested. 
+	
+	\item Speed up the computations by compile central functions. 
+	
+	\item Investigate weighting of data and normalization. 
+	
+	\item A few recent studies have introduced additional improvements that I'm trying to implement. \cite{Matteson1306} uses hierarchical clustering to find multivariate changepoints in an off-line approach with rather promising results.  \cite{Xie2013} suggests methods to deal with data gaps and missing elements in higher dimension. This might suggest ways to develop a fully analytic 2D approach without interpolation, if based on 2D datasets. \cite{Harle2014} combines robust local statistic analysis with an Bayesian overview. This might be a good method for spatial data as I often get false-hits in the vicinity of the actual change. 
+\end{enumerate}
+

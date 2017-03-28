@@ -1,0 +1,11 @@
+This is a report of my present state of the studies of change point detection for spatial data. It is rather sketchy, but I hope to able to pinpoint the challenges and discuss a possible continuation. Attached is also a number of plots of changepoints, calculated with various parameters. These are to help us select good location for transitions and understand the limitations of the technique and what can be done to improve it.
+
+The aim of changepoint detection is to locate transitions between states, \textit{partitions}, and eventually quantify the probability for the change at that point. 
+
+Many applications of change-point detection work on time series, e.g. to detect the impact of a change in policies for economic growth or sensor information to control robotics \cite{Adams2007}. However, the application have also been used to find sharp transitions in non-temporal 1D-series. A well known example is detection of geological boundaries from (noisy) geophysical wire line logs (e.g. \cite{Reading2013,Gallagher2011a, Adams2007}). 
+
+In this project, I'm aiming to use change point detection to locate geological boundaries in spatial datasets of potential field data. My approach, so far, is to extract 1D lines from published 2D datasets and treat the lines as regular time series. The concept is suggested by professor A. Reading and have been tried by Dr. M. Cracknell \cite{Cracknell2015}, but to my knowledge similar approach has not been published.
+
+My hope is to develop the techniques and incorporate edge detection with quantifiable probabilities to generate a map of East Antarctic boundaries with a potential use for e.g heat flux estimations and understanding of regional uplift. The uncertainties, should also be mapped and used as statistical inference rather than an exact, but incorrect, dataset. It's also a good case to investigate and potentially develop the techniques. 
+
+The technique, however, is developed and evaluated on Australian terrains with, more or less, known geology and crustal structure. 

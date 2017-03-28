@@ -1,0 +1,148 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\graphicspath{ {fig/} }
+
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{listings}
+\usepackage[left=2.5cm,top=2cm,right=2.5cm,bottom=2cm,bindingoffset=0.5cm]{geometry}
+\usepackage{subcaption}
+
+\usepackage{rotating}
+\usepackage[font={small,it}]{caption}
+
+\usepackage[backend=bibtex8]{biblatex}
+\bibliography{/Users/tobiasstal/proj/ref/ref.bib}
+
+\usepackage{advdate}
+
+\usepackage{xcolor}
+\usepackage{mdframed}
+
+\usepackage{titling}
+
+\pretitle{\begin{center}\Huge\bfseries}
+	\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\begin{center}\Large\ttfamily}
+	\postauthor{\end{center}}
+\predate{\par\large\centering}
+\postdate{\par}
+
+\author{Tobias Staal}
+\title{Spatial Baysean Changepoint Detection\\ - \\ Progress Report 2}
+\date{\AdvanceDate[-1]\today}
+\begin{document}
+
+	
+	
+\input{variables.tex}
+
+\maketitle
+
+
+
+
+%1 - Focus on a smaller number of lines to start with, please do…  
+%Line 12 (across Pilbara/Capricorn to Yilgarn, terranes well defined and some surface exposure)
+%Line 2 (orogens, comparision with Line 12, terranes mostly undercover)
+
+%Could you focus the getting the initial multivariable changepoint code going on these lines?   When you have some results we will have a skype meeting.  Happy to look at other lines also, but these ones will be most telling in the first instance.  
+
+%a) Point of review, assuming you are working on this most of the time, 19 March - Tobias to send short e-mail update to all whether things are working or not.
+
+%b) Pre-skype meeting, send .pdf for discussion. Include 7 March results on line 12 also because these univariate results will be quite informative alongside the multivariate.  Note that there are some statistical inference ideas that we should discuss also.  We will exchange e-mails before the Skype meeting on data used, preprocessing, results, best interpretation, application to Antarctica (amongst other things).
+
+%2 - Tobias to write a research schedule (an ordered list of tasks will do, half page max) for analysis of some lines in SA.  Suggest selecting these with a view to similar work into Antarctica, across the congugate margin.  Tobias - Could you make a draft of this and discuss with Jacqui when you next meet?   Then send it to me also for comment.
+
+%Here’s a start
+
+%1 - Make plots which show major geological terranes in Aus and Ant on plate reconstruction view.
+%2 - Select lines in Australia in discussion with Jacqui,   one line should be a cross section of the Gawler Craton extending well off each end.   Other line perhaps a shorter version of Line 5, a bit further north and across strike of orogen, from the Yilgarn to SA.
+%3 - Analysis using…
+%4 - Output for initial review…
+%5 - Discussion… 
+%6 - Antarctic lines?
+% - etc
+
+
+
+
+
+
+\chapter{Presentation}
+\input{ch/presentation.tex}
+
+
+\chapter{Methods}
+\input{ch/methods.tex}
+
+
+\chapter{Concerns and challenges. Room for improvements.}
+\input{ch/concerns.tex}
+
+
+\chapter{To do.}
+\input{ch/todo.tex}
+
+
+
+%The delineations between partitions are called the changepoints.We further assume that for each partition ρ, the data within it are i.i.d. from some probability distribution P (xt | ηρ). The parameters ηρ, ρ = 1, 2, . . . are taken to be i.i.d. as well. We denote the contiguous set of observations between time a and b inclusive as xa:b. The discrete a priori probability distribution over the interval between changepoints is denoted as Pgap(g).
+
+
+
+
+
+
+
+%Offline Changepoint Detection
+%Lets compute the probability of changepoints at each time step. We need two things for that. First a prior of how probable is it to have two successive changepoints with the distance t. The second thing is a model of the likelihood of data in a sequence [s, t] of the data, given that in this sequence there is no changepoint.
+%For this example we assume a uniform prior over the length of sequences (const_prior) and a piecewise gaussian model (gaussian_obs_log_likelihood).
+
+
+%Use SSE accelerated logsumexp().
+%The offline_changepoint_detection() function returns three things: Q[t], the log-likelihood of data [t, n], P[t, s], the log-likelihood of a datasequence [t, s], given there is no changepoint between t and s and Pcp[i, t], the log-likelihood that the i-th changepoint is at time step t. To actually get the probility of a changepoint at time step t sum the probabilities.
+
+%That works pretty well, but is somewhat slow. It's possible to speed that up by truncating a sum in the algorithm. However that sometimes leeds to $\infty$ values. Set the truncate parameter to e.g. -10 to test that out.
+
+%[1] Paul Fearnhead, Exact and Efficient Bayesian Inference for Multiple Changepoint problems, Statistics and computing 16.2 (2006), pp. 203--213
+%[2] Xuan Xiang, Kevin Murphy, Modeling Changing Dependency Structure in Multivariate Time Series, ICML (2007), pp. 1055--1062
+
+%Online Changepoint Detection
+%Let's assume the data points come in one after another and not as these nice batches. During the process you want to know if the new point has the same hyperparameter or different ones. You need an online changepoint detection.
+%Happily there is one, although it's interface is kind of suboptimal so far, in that it expects batches of data still and just assumes they drop in over time... I will change that at some point.
+%The online version computes slightly different things. For each time step it returns the probability distribution over the length of the last sequence. E.g. R[7, 3] is the probability at time step 7 that the last sequence is already 3 time steps long. It also returns the MAP estimate at each timestep for convenience.
+%To plot the distributions we use a grey-scale colormap, black is zero, white 1. We also plot the probability at each time step for a sequence length of 0, i.e. the probability of the current time step to be a changepoint.
+%Because it's very hard to correctly evaluate a change after a single sample of a new distribution, we instead can "wait" for Nw samples and evalute the probability of a change happening Nw samples prior.
+
+%[1] Ryan P. Adams, David J.C. MacKay, Bayesian Online Changepoint Detection, arXiv 0710.3742 (2007)
+%There you also find a Matlab version, which this code is based on.
+
+%[1] Paul Fearnhead, Exact and Efficient Bayesian Inference for Multiple
+%Changepoint problems, Statistics and computing 16.2 (2006), pp. 203--213
+
+%[2] Ryan P. Adams, David J.C. MacKay, Bayesian Online Changepoint Detection,
+%arXiv 0710.3742 (2007)
+
+%[3] Xuan Xiang, Kevin Murphy, Modeling Changing Dependency Structure in
+%Multivariate Time Series, ICML (2007), pp. 1055--1062
+
+
+
+
+
+\chapter{Temporary results}
+\input{ch/results.tex}
+
+
+%
+%
+\printbibliography
+\end{document}

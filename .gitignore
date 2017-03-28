@@ -1,0 +1,8 @@
+.DS_store
+.sconsign.dblite
+gis/*
+old/*
+notes/*
+result/*
+doc/*
+.git/*
